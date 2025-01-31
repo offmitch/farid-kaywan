@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Mortage Architect</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('../include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+
+    <main>
+
+        <div class="parent-container">
+            <div class="container">
+                <img src="../images/logo_and_name.jpg" alt="Logo and Name" style="height: 200px; vertical-align: middle;">
+                <a href="../about_us_options/the_company.html">
+                <p>"You’ll love how we treat every mortgage solution as if we were working with you to build your dream home 
+                    - carefully constructed to match your unique requirements."<p>
+                <button class="my-button">The Company</button>
+                </a>
+
+            </div>
+            <div class="container">Leadership</div>
+            <div class="container">Join Our Team</div>
+            <div class="container">Our Mortgage Lenders</div>
+        </div>
+
+
+
+
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('../include/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+</body>
+</html>

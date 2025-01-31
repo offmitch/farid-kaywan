@@ -1,0 +1,329 @@
+/* Base Styles */
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Typography */
+.roboto-condensed-light {
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.roboto-condensed-regular {
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.roboto-condensed-bold {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Header Styles */
+header {
+    background: white;
+    color: white;
+    padding: 15px;
+}
+
+header h1 {
+    color: #333;
+    font-size: 40px;
+}
+
+/* Navigation */
+nav {
+    background: #555;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+/* Update container styles */
+.parent-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: white;
+    padding: 15px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/* Update profile container styles */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.title {
+    flex-grow: 1;
+}
+
+.title h1, .title h4 {
+    text-align: left;
+    margin: 0;
+}
+
+.title h1 {
+    color: #2c3e50;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.title h4 {
+    color: #7f8c8d;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+/* Update text styles for better mobile reading */
+.intro {
+    font-size: 1em;
+    line-height: 1.6;
+    padding: 0 5px;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.contact-info strong {
+    color: #34495e;
+    font-weight: 600;
+}
+
+/* Button Styles */
+.my-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: darkgray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.my-button:hover {
+    background-color: black;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Utility Classes */
+.centered {
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+}
+
+/* Headings */
+h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+    text-align: left;
+}
+/* Mobile-First Media Queries */
+@media screen and (max-width: 576px) {
+    .parent-container {
+        padding: 5px;
+    }
+
+    .container {
+        padding: 10px;
+        margin: 3px 0;
+    }
+
+    .profile-container {
+        padding: 10px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title h1 {
+        font-size: 1.6em;
+        margin-top: 10px;
+    }
+
+    .title h4 {
+        font-size: 0.9em;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .intro {
+        font-size: 0.95em;
+        padding: 0;
+    }
+
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 0.85em;
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .contact-info p {
+        font-size: 0.9em;
+        margin: 5px 0;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    /* Ensure buttons don't overflow */
+    .my-button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        white-space: nowrap;
+        display: inline-block;
+        margin: 5px;
+    }
+}
+
+/* Small tablets and large phones */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    .parent-container {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .profile-container {
+        padding: 15px;
+    }
+
+    .title h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets and small laptops */
+@media screen and (min-width: 769px) {
+    .parent-container {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .profile-container {
+        flex-wrap: nowrap;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Fix footer on mobile */
+footer {
+    position: relative;
+    width: 100%;
+    padding: 10px 5px;
+}

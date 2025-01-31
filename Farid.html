@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Mortgage Archite</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+
+<div class="parent-container">
+    <div class="container">
+<div class="profile-container">
+    <div class="title">
+    <img src="/images/farid.jpg" alt="Farid's Profile Picture" class="profile-image">
+    </div>
+    <div class="title">
+        <h1>Farid Kaywan</h1>
+        <h4>Mortage Broker</h4>
+    </div>
+</div>
+</div>
+<div class="container">
+    <p class="intro">
+        My journey in financial services began over a decade ago, driven by a desire to help people navigate the complexities of lending. 
+        With my Bachelors Degree in Business, focusing in Finance, I developed a deep understanding of Canada's financial market that has allowed me to build a strong foundation and navigate this dynamic industry.
+        <br><br>
+        I started my career at a major bank where I worked as both an advisor and manager. This experience taught me the ins and outs of financing, allowing me to assist countless clients with their home purchases, investment properties, and business loans. Each client’s story reinforced the importance of understanding their unique situations and goals.
+        Building relationships has always been at the heart of my work. I believe in providing clear, actionable advice so my clients feel confident in their decisions. It’s about more than just numbers; it’s about the dreams those numbers represent.
+        <br><br>
+        The trust I’ve gained from my clients is reflected in the network of referrals and connections around me. They value the attention and care I bring to each transaction, knowing I prioritize their best interests. I remain dedicated to guiding clients through their financial journeys. I look forward to helping you achieve your goals, step by step.    </p>
+</div>
+
+
+<div class="container">
+<h2>Contact Information</h2>
+    <div class="contact-info">
+        <p><strong>Phone:</strong> C 778-996-9585</p>
+        <p><strong>Business Address:</strong><br> C325-20178 96 Ave Langley, BC V1M 0B2</p>
+        <p><strong>Serving:</strong> Fraser Valley, Vancouver</p>
+        <p><strong>Corporate Office Address:</strong><br> 5675 Whittle Rd Mississauga, ON L4Z3P8</p>
+    </div>
+    </div>
+
+</div>
+
+
+
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('include/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+</body>
+</html>
