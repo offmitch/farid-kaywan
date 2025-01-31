@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Mortage Architect</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('../include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+
+    <div class="parent-container">
+<div class="container">
+<form class="basic-info-form">
+    <h2>Quick Application Form</h2>
+    
+    <!-- Name and DOB -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required><br><br>
+    
+    <!-- Purchase Price and Mortgage Amount -->
+    <label for="purchase-price">Purchase Price:</label>
+    <input type="number" id="purchase-price" name="purchase-price" required><br><br>
+    
+    <label for="mortgage-amount">Mortgage Amount:</label>
+    <input type="number" id="mortgage-amount" name="mortgage-amount" required><br><br>
+    
+    <!-- Contact Information -->
+    <label for="contact-info">Contact Information:</label>
+    <input type="email" id="contact-info" name="contact-info" required><br><br>
+    
+    <!-- Address -->
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" required></textarea><br><br>
+    
+    <!-- Submit Button -->
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+</div>
+
+
+
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('../include/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+</body>
+</html>

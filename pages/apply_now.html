@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Mortage Architect</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('../include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+
+    <main>
+
+        <div class="parent-container">
+            <div class="container">
+                <a href="../applications/application.html">
+                <p>Complete this detailed form for a comprehensive application with all necessary information.<p>
+                <button class="application-button">Full Application</button>
+                </a>
+
+            </div>
+            <div class="container">
+                <a href="../applications/quick_application.html">
+                <p>Fill out this simplified form with essential details for a faster application process.<p>
+                <button class="application-button">Quick Application</button>
+                </a>
+
+            </div>
+            
+        </div>
+
+
+
+
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+    <script>
+        fetch('../include/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+</body>
+</html>

@@ -212,6 +212,24 @@ h2 {
     border-bottom: 2px solid #ecf0f1;
     text-align: left;
 }
+
+
+.application-button {
+    background-color: #2e84ca;  /* Green background */
+    color: white;               /* White text */
+    padding: 10px 20px;         /* Padding inside the button */
+    border: none;               /* Remove border */
+    border-radius: 5px;         /* Rounded corners */
+    font-size: 16px;            /* Text size */
+    cursor: pointer;           /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+  }
+  
+  .application-button:hover {
+    background-color: #77b3e4; /* Darker green on hover */
+  }
+
+
 /* Mobile-First Media Queries */
 @media screen and (max-width: 576px) {
     .parent-container {
@@ -321,9 +339,8 @@ h2 {
     }
 }
 
-/* Fix footer on mobile */
 footer {
-    position: relative;
+    position: fixed;
     width: 100%;
     padding: 10px 5px;
 }
