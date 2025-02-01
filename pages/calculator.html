@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/styles.css">
+  <link rel="stylesheet" href="../style/calc_styles.css">
+  <link rel="stylesheet" href="../style/mobile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Mortgage Architect</title>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('../include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+
+  <div class="main-content">
+    <div class="left-content">
+      <div class="header-container">
+        <h1>Mortgage Calculator</h1>
+        <button class="clear-all-btn">Clear All</button>
+      </div>
+      <form id="my-form">
+        <div class="mortgage-amount-container">
+          <label for="mortgage-amount">Mortgage Amount</label>
+          <div class="input-container">
+
+            <p>$</p>
+            <input type="text" id="mortgage-amount">
+          </div>
+        </div>
+        <div class="mortgage-term-container">
+          <label for="mortgage-term">Mortgage Term</label>
+          <div class="input-container">
+
+            <input type="text" id="mortgage-term">
+            <p>years</p>
+          </div>
+
+        </div>
+        <div class="interest-rate-container">
+          <label for="interest-rate">Interest Rate</label>
+          <div class="input-container">
+            <input type="text" id="interest-rate">
+            <p>%</p>
+
+          </div>
+
+        </div>
+        <div class="mortgage-type-container">
+
+          <label>Mortgage Type</label>
+
+          <div class="radio-input-container">
+            <input type="radio" name="mortgage-type" value="repayment">
+            <label>Repayment</label>
+
+          </div>
+          <div class="radio-input-container">
+            <input type="radio" name="mortgage-type" value="interest-only">
+            <label>Interest Only</label>
+
+          </div>
+        </div>
+      </form>
+      <button class="calculate-btn" type="submit" form="my-form">
+        <img src="../images/icon-calculator.svg" alt="calculator icon">
+        Calculate Repayments</button>
+    </div>
+    <div class="right-content">
+      <div class="before-results-container">
+        <img src="../images/illustration-empty.svg" alt="payments illustrations">
+        <h2>Results shown here</h2>
+        <p>Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+      </div>
+      <div class="after-results-container hidden">
+        <div class="results-header">
+          <h2>Your results</h2>
+          <p>Your results are shown below based on the information you provided. To adjust the results, edit the form
+            and click “calculate repayments” again.</p>
+        </div>
+        <div class="results-description">
+          <div class="results-monthly-repayments">
+            <span>Your monthly repayments</span>
+            <p id="monthly-repayments">$1,797.74</p>
+          </div>
+          <div class="line"></div>
+          <div class="results-total-over-term">
+            <span>Total you'll repay over the term</span>
+            <p id="total-over-the-term">$539,322.94</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <div id="footer-container"></div>
+  <script>
+      fetch('../include/footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('footer-container').innerHTML = data);
+  </script>
+</body>
+
+</html>
