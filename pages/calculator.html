@@ -20,7 +20,7 @@
             .then(response => response.text())
             .then(data => document.getElementById('header-container').innerHTML = data);
     </script>
-
+  <div class="parent-container">
   <div class="main-content">
     <div class="left-content">
       <div class="header-container">
@@ -36,10 +36,29 @@
             <input type="text" id="mortgage-amount">
           </div>
         </div>
+        <div class="payment-frequency-container">
+          <label for="payment-frequency">Payment Frequency</label>
+          <div class="input-container">
+              <select id="payment-frequency">
+                  <option value="annually">Annual</option>
+                  <option value="semi-annual">Semi-Annual</option>
+                  <option value="quarterly">Quarterly</option>
+                  <option value="bi-monthly">Bi-Monthly</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="semi-monthly">Semi-Monthly</option>
+                  <option value="bi-weekly">Bi-Weekly</option>
+                  <option value="accelerated-bi-weekly">Accelerated Bi-Weekly</option>
+                  <option value="accelerated-weekly">Accelerated Weekly</option>
+              </select>
+              <p>
+                  payments
+              </p>
+          </div>
+      </div>
+      
         <div class="mortgage-term-container">
           <label for="mortgage-term">Mortgage Term</label>
           <div class="input-container">
-
             <input type="text" id="mortgage-term">
             <p>years</p>
           </div>
@@ -54,21 +73,17 @@
           </div>
 
         </div>
-        <div class="mortgage-type-container">
-
-          <label>Mortgage Type</label>
-
-          <div class="radio-input-container">
-            <input type="radio" name="mortgage-type" value="repayment">
-            <label>Repayment</label>
-
-          </div>
-          <div class="radio-input-container">
-            <input type="radio" name="mortgage-type" value="interest-only">
-            <label>Interest Only</label>
+       
+        <div class="amortization-container">
+          <label for="amortization">Amortization Period</label>
+          <div class="input-container">
+            <input type="text" id="amortization">
+            <p>years</p>
 
           </div>
+
         </div>
+      
       </form>
       <button class="calculate-btn" type="submit" form="my-form">
         <img src="../images/icon-calculator.svg" alt="calculator icon">
@@ -100,6 +115,7 @@
       </div>
     </div>
   </div>
+</div>
   <script src="script.js"></script>
   <div id="footer-container"></div>
   <script>
