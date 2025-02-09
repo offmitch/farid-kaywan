@@ -205,5 +205,16 @@ function calculate(amount, term, rate) {
     return [monthlyPayment, totalRepayOverTheTerm]
 }
 
+function toggleMenu() {
+    let nav = document.querySelector(".nav-links");
+    if (nav.style.display === "flex") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+    }
+}
+
+
+
 
 

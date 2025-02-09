@@ -15,8 +15,10 @@ html, body {
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    /* margin-top: 150px; */
     padding: 0;
     text-align: center;
+    width: 100vw;
 }
 
 /* Typography */
@@ -40,28 +42,43 @@ body {
     font-style: normal;
 }
 
-/* Header Styles */
 header {
     background: white;
     color: white;
     padding: 15px;
+    width: 100vw;
 }
 
 header h1 {
     color: #333;
     font-size: 40px;
+    width: 100vw;
 }
 
-/* Navigation */
+#header-container {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #555; 
+    z-index: 1000;
+}
+
+
 nav {
     background: #555;
     padding: 10px;
+    width: 100vw;
+    top: 0;
+    left: 0;
 }
+
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
+    width: 100vw;
 }
 
 /* Update container styles */
@@ -70,6 +87,7 @@ nav a {
     margin: 0 auto;
     padding: 10px;
     display: flex;
+    position: relative;
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
@@ -179,12 +197,10 @@ img {
     background-color: black;
 }
 
-/* Footer */
 footer {
     background: #333;
     color: white;
     padding: 10px;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
@@ -231,6 +247,52 @@ h2 {
     padding: 0;
     margin: 0;
 }
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: center;  /* Centers the nav items */
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #555;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    justify-content: center;  /* Center the links */
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Nav link items */
+.nav-links li {
+    margin: 0 15px;  /* Adds spacing between items */
+}
+
+/* Nav links text */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px;
+}
+
+
+/* Hamburger icon (hidden on large screens) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 
 /* Mobile-First Media Queries */
@@ -270,14 +332,23 @@ h2 {
     }
 
     nav {
-        padding: 5px;
+        display: flex;
+        justify-content: right; 
+        position: relative; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #555;
+        padding: 10px 20px;
+        z-index: 1000; /* Ensures it's on top */
     }
-
+    
     nav a {
-        margin: 0 5px;
+        display: flex;
+        justify-content: right; 
+        margin: 5px;
         font-size: 0.85em;
-        display: inline-block;
-        padding: 5px;
+        padding: 20px;
     }
 
     .contact-info p {
@@ -300,12 +371,12 @@ h2 {
     }
 
     .application-button {
-        background-color: #2e84ca;  /* Green background */
-        color: white;               /* White text */
-        padding: 10px 20px;         /* Padding inside the button */
+        background-color: #6c91af; 
+        color: white;             
+        padding: 10px;         
         border: none;               /* Remove border */
         border-radius: 5px;         /* Rounded corners */
-        font-size: 16px;            /* Text size */
+        font-size: 12px;            /* Text size */
         cursor: pointer;           /* Pointer cursor on hover */
         transition: background-color 0.3s ease; /* Smooth background color transition */
       }
@@ -313,6 +384,26 @@ h2 {
       .application-button:hover {
         background-color: #77b3e4; /* Darker green on hover */
       }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #555;
+        text-align: left;
+        padding: 10px 5px;
+    }
+
+    .nav-links li {
+        padding: 10px 20px;
+    }
+
+    .hamburger {
+        display: block; /* Show menu button */
+    }
     
 }
 
@@ -351,6 +442,44 @@ h2 {
       .application-button:hover {
         background-color: #77b3e4; /* Darker green on hover */
       }
+    nav {
+        justify-content: right; 
+        position: relative; /* Keeps it at the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #555;
+        padding: 10px 20px;
+        z-index: 1000; /* Ensures it's on top */
+    }
+    
+    nav a {
+        margin: 10px;
+        font-size: 0.85em;
+        padding: 5px;
+        justify-content: right; 
+    }
+    .nav-links {
+        display: none;
+        justify-content: right; 
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background: #555;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+        justify-content: right; 
+    }
+
+    .hamburger {
+        display: block; /* Show menu button */
+    }
     
 }
 
@@ -371,10 +500,4 @@ h2 {
     .contact-info {
         grid-template-columns: repeat(2, 1fr);
     }
-}
-
-footer {
-    position: fixed;
-    width: 100%;
-    padding: 10px 5px;
 }
