@@ -8,6 +8,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Mortage Architect</title>
+    <style>
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            bottom: 0;
+            position: fixed;
+        }
+    </style>
 </head>
 <body>
     <div id="header-container"></div>
@@ -17,29 +27,29 @@
             .then(data => document.getElementById('header-container').innerHTML = data);
     </script>
 
-    <main>
+    
 
         <div class="parent-container">
             <div class="container">
                 <h4>Complete this detailed form for a comprehensive application with all necessary information.</h4>
                 <a href="https://application.malink.ca:8112/App/ABWT/KAYWANA/en-ca/11180">
-                    <button class="my-button">Apply here</button>
+                    <button class="my-button">Apply here
+                    </button>
                     </a>
-
-            
+        </div>
         </div>
 
 
 
 
 
-    <!-- Include footer -->
-    <div id="footer-container"></div>
-    <script>
-        fetch('../include/footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer-container').innerHTML = data);
-    </script>
-        <script src="../scripts/script.js"></script>
-</body>
-</html>
+        <div id="footer-container"></div>
+        <script>
+            fetch('../include/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer-container').innerHTML = data);
+        </script>
+            <script src="../scripts/script.js"></script>
+    
+    </body>
+    </html>
