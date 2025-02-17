@@ -411,11 +411,27 @@ nav {
     }
 
     .nav-links li {
+        text-align: center;
         padding: 10px 20px;
+        margin: 10px 0;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
     }
 
     .hamburger {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        z-index: 1100; 
         display: block;
+        position: relative;
     }
     
 }

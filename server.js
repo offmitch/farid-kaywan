@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-// const bodyParser = require("express.json");
 
 const app = express();
 const PORT = 3000;

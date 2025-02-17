@@ -17,16 +17,17 @@
             bottom: 0;
             position: fixed;
         }
+        
     </style>
 </head>
 <body>
-    <div id="header-container"></div>
+    <div id="header-container">
     <script>
         fetch('../include/header.html')
             .then(response => response.text())
             .then(data => document.getElementById('header-container').innerHTML = data);
     </script>
-
+</div>
     
 
         <div class="parent-container">
@@ -39,6 +40,7 @@
         </div>
         </div>
 
+        <div style="height: 400px;"></div>
 
 
 

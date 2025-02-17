@@ -17,7 +17,6 @@
             width: 100%;
         }
 
-        /* Ensure both containers are visible */
         .parent-container .container {
             width: 80%;
             padding: 20px;
@@ -27,7 +26,6 @@
             background-color: #f9f9f9;
         }
 
-        /* Buttons container */
         .solutions {
             display: flex;
             flex-wrap: wrap;
@@ -36,17 +34,15 @@
             padding: 20px 0;
         }
 
-        /* Hide all content sections initially */
         .content-section {
             display: none;
         }
 
-        /* Show selected section */
         .content-section.active {
             display: block;
             animation: fadeIn 0.5s ease-in-out;
             width: 100%;
-            max-width: 1200px; /* Adjust this as needed */
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -61,7 +57,6 @@
         }
 
     .guide-container {
-        /* display: flex; */
         flex-wrap: wrap;
         align-items: flex-start;
     }
@@ -72,20 +67,22 @@
     }
 
     .guide-image {
-        flex: 0 0 35%; /* Image takes up about 35% of the width */
+        flex: 0 0 35%; 
         max-width: 35%;
-        margin-left: 20px; /* Adds spacing between text and image */
+        margin-left: 20px; 
     }
 
     .guide-image img {
         width: 100%;
         height: auto;
-        border-radius: 10px; /* Optional: Adds a nice rounded effect */
+        border-radius: 10px;
     }
 
     .step {
         width: 100%;
     }
+    
+    
 
     </style>
 </head>
@@ -350,51 +347,6 @@
 
 </div>
 </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".solutions .my-button");
-    const sections = document.querySelectorAll(".content-section");
-
-    // Hide all sections initially
-    sections.forEach(section => section.style.display = "none");
-
-    buttons.forEach(button => {
-        button.addEventListener("click", function () {
-            console.log("Button clicked:", this.getAttribute("data-target")); // Debugging log
-            
-            // Hide all sections
-            sections.forEach(section => {
-                section.classList.remove("active");
-                section.style.display = "none";
-            });
-
-            // Get the target section
-            const targetID = this.getAttribute("data-target");
-            const targetSection = document.getElementById(targetID);
-
-            if (targetSection) {
-                console.log("Showing section:", targetID); // Debugging log
-                targetSection.classList.add("active");
-                targetSection.style.display = "block"; // Ensure it's visible
-            }
-
-            // Change background image
-            const bgImage = this.getAttribute("data-bg-image");
-            if (bgImage) {
-                document.body.style.backgroundImage = `url('${bgImage}')`;
-                document.body.style.backgroundSize = "cover"; // Makes the image cover the whole screen
-                document.body.style.backgroundPosition = "center"; // Centers the image
-                document.body.style.backgroundRepeat = "no-repeat"; // Prevents repeating
-            } else {
-                document.body.style.backgroundImage = "none"; // Remove background if no image provided
-            }
-        });
-    });
-});
-
-</script>
-
-
 
     <div id="footer-container"></div>
     <script>

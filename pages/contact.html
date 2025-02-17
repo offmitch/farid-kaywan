@@ -15,7 +15,7 @@
             padding: 10px;
             width: 100%;
             bottom: 0;
-            position: fixed;
+            position: relative;
         }
        * {
             box-sizing: border-box;
@@ -24,8 +24,8 @@
 
         html, body {
             overflow-x: hidden;
-            overflow-y: hidden;
             width: 100%;
+            height: 100%;
             position: relative;
         }
 
@@ -38,6 +38,8 @@
             background: url('../images/bg1.jpg') no-repeat center center fixed;
             background-size: cover;
             color: white;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
@@ -47,6 +49,8 @@
             padding: 50px;
             border-radius: 10px;
             min-height: 600px;
+            overflow-y: auto;
+            flex: 1;
         }
 
         h2 {
@@ -66,8 +70,7 @@
             border-radius: 5px;
         }
 
-        button {
-            width: 100%;
+        .send-button {
             padding: 20px;
             border: none;
             background: #36b6d6;
@@ -103,7 +106,7 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required></textarea>
         
-            <button type="submit">Send Message</button>
+            <button class="send-button" type="submit">Send Message</button>
         </form>
         
     </div>

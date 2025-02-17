@@ -20,13 +20,13 @@
     </style>
 </head>
 <body>
-    <div id="header-container"></div>
+    <div id="header-container">
     <script>
         fetch('../include/header.html')
             .then(response => response.text())
             .then(data => document.getElementById('header-container').innerHTML = data);
     </script>
-
+</div>
     <main>
 
         <div class="parent-container">
@@ -38,11 +38,11 @@
         </div>
         </div>
 
+        <div style="height: 400px;"></div>
 
 
 
 
-    <!-- Include footer -->
     <div id="footer-container"></div>
     <script>
         fetch('../include/footer.html')
