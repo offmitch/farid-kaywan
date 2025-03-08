@@ -1,7 +1,6 @@
 **INSTALLATION GUIDE**
 
-Step 1: Install Node.js  
-
+**Step 1: Install Node.js**
 1. Go to https://nodejs.org
 2. Click Download (choose the LTS version).  
 3. Run the downloaded file and follow the installation steps.  
@@ -9,28 +8,28 @@ Step 1: Install Node.js
    - Open VS Code.  
    - Click Terminal > New Terminal.
    - Type this command and press Enter:
-       node -v
+       "node -v"
    - If you see a version number (e.g., `v18.16.0`), Node.js is installed correctly.  
 
 
-Step 3: Install Dependencies  
+**Step 2: Install Dependencies**
 1. Open VS Code.  
 2. Click Terminal > New Terminal.  
-3. Type this command and press Enter: 
-     npm install
+3. Type this command and press Enter:
+   "npm install"
 
 
-Step 4: Start the Server
+**Step3: Start the Server**
 To run the project locally:  
 1. In VS Code, open the Terminal.  
 2. Type the following command and press Enter:
-     node server.js
+   "node server.js"
    
 4. If everything is correct, you will see a message like:
-     Server running on http://localhost:3000
+   "Server running on http://localhost:3000"
    
-5. Open your web browser (Chrome, Edge, or Firefox) and go to:  
-   http://localhost:3000
+6. Open your web browser (Chrome, Edge, or Firefox) and go to:  
+   "http://localhost:3000"
 
 Phone View: 
   1. Confirm both devices are on the same wifi
