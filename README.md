@@ -1,3 +1,5 @@
+**INSTALLATION GUIDE**
+
 Step 1: Install Node.js  
 
 1. Go to https://nodejs.org
