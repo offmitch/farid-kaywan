@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <title>Mortgage Architect</title>
+    <style>
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .review h3 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        .review p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container">
+    <script>
+        fetch('/include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+</div>
+
+<div data-instance-id="XzVtna4wGWB4vTPgvmU1">
+    <script src="https://reviews.beaver.codes/widget/web-google-reviews.js" async="true"></script>
+</div>
+
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+    
+    <script>
+        fetch('/include/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>

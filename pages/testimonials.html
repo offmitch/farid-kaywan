@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <title>Mortgage Architect</title>
+
+</head>
+<body>
+    <div id="header-container">
+    <script>
+        fetch('/include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+</div>
+
+<div class="parent-container">
+    <h2 style="text-align: center;">Testimonials</h2> <a href="/pages/review_test.html">Other reviews</a>
+
+    <div class="testimonial-wrapper">
+
+        <div class="testimonial">
+                 Working with Farid was an absolute pleasure! He guided us through the entire mortgage process, 
+                 answering all our questions with patience and expertise. Thanks to him, we secured a fantastic rate and closed on our dream home stress-free. 
+                 I highly recommend him to anyone looking for a dedicated and knowledgeable mortgage broker.
+            <br><br>
+            <span class="testimonial-author">
+                <img src="/images/dude.jpg" alt="Image" class="testimonial-image"> - Jonathan Reynolds
+            </span>      
+        </div>
+    
+        <div class="testimonial">
+            Farid was absolutely amazing to work with! His expertise and commitment to helping us secure the best mortgage option truly made a difference. He took the time to understand our needs, explained everything in simple terms, and was always available for any questions. We couldn’t have asked for a better mortgage broker, and we’re so grateful for his guidance throughout the entire process. Highly recommend him to anyone in need of professional mortgage advice.
+            <br><br>
+            <span class="testimonial-author">
+                <img src="/images/bro.jpg" alt="Image" class="testimonial-image"> - John Doe
+            </span> 
+        </div>
+        <div class="testimonial">
+            Working with Farid was a fantastic experience! His deep knowledge and dedication to finding the perfect mortgage solution for us made all the difference. He took the time to listen to our concerns, provided clear and straightforward explanations, and was always there to address any questions we had. We couldn't have asked for a more reliable and supportive mortgage broker. We are incredibly grateful for his guidance throughout the journey. I highly recommend Farid to anyone seeking expert mortgage advice.            <br><br>
+            <span class="testimonial-author">
+                <img src="/images/lady.jpg" alt="Image" class="testimonial-image"> - Samantha Smith
+            </span> 
+        </div> 
+        <div class="testimonial">
+            Farid was an absolute pleasure to work with! His professional insight and dedication to securing the best mortgage rate for us were unmatched. He took the time to thoroughly understand our situation, explained the process in an easy-to-follow manner, and was always available to offer support. Thanks to his expertise, we felt confident every step of the way. We highly recommend Farid to anyone in search of a knowledgeable and reliable mortgage broker.            <span class="testimonial-author">
+                <img src="/images/lady2.jpg" alt="Image" class="testimonial-image"> - Emily Harrison
+            </span> 
+        </div> 
+        
+    </div>
+   
+    
+
+</div>
+
+
+
+
+    <!-- Include footer -->
+    <div id="footer-container"></div>
+    
+    <script>
+        fetch('/include/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+    <script src="/scripts/script.js"></script>
+</body>
+</html>
