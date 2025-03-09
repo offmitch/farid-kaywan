@@ -33,7 +33,7 @@ To run the project locally:
 
 Phone View: 
   1. Confirm both devices are on the same wifi
-  2. Open Command Prompt
+  2. Open Command Prompt (or Terminal for MAC)
   3. Type "ipconfig" and press enter
   4. Copy IPv4 Address under Wi-Fi:
   5. In phone browser enter: http://IPv4_ADDRESS_HERE:3000
