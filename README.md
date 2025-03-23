@@ -19,7 +19,7 @@
    "npm install"
 
 
-**Step3: Start the Server**
+**Step 3: Start the Server**
 To run the project locally:  
 1. In VS Code, open the Terminal.  
 2. Type the following command and press Enter:
