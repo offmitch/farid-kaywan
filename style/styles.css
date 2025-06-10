@@ -17,6 +17,18 @@ body {
     width: 100vw;
 }
 
+#footer-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;  /* optional, match your footer style */
+  color: white;            /* optional */
+  padding: 10px;           /* optional */
+  text-align: center;      /* optional */
+  z-index: 1000;           /* keeps it on top of other content */
+}
+
 .roboto-condensed-light {
     font-family: "Roboto Condensed", serif;
     font-optical-sizing: auto;
