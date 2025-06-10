@@ -154,12 +154,12 @@ img {
     position: relative;
     font-style: italic;
     font-size: 1.2rem;
-    padding: 20px;
+    padding: 10px;
     background-color: #f4f4f4;
     font-family: 'Lora', serif;
     border-left: 5px solid #2a8ab7;
     margin: 20px auto;
-    max-width: 600px;
+    max-width: 400px;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     display: block;

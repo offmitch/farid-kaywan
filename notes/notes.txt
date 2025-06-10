@@ -1,0 +1,2 @@
+smaller boxes
+transition into 4 more, no scrolling.
