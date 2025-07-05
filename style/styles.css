@@ -159,19 +159,38 @@ img {
   margin: 0 auto;
 }
 
+.fade-container {
+  position: relative;
+  min-height: 800px;
+}
+
+
 
 .testimonial-group {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 4s ease;
   grid-template-columns: repeat(2, 1fr);
   gap: 100px;
   padding: 50px;
   max-width: 1200px;
   margin: 0 auto;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .testimonial-group.active {
+  visibility: visible;
   display: grid;
+  opacity: 1;
 }
+
+.testimonial-group:not(.active) {
+  display: grid; /* keeps layout dimensions consistent */
+}
+
 
 .testimonial {
     position: relative;

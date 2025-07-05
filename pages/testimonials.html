@@ -21,12 +21,12 @@
 </div>
 
 <div class="parent-container">
-
+<div class="fade-container">
  <div class="testimonial-wrapper">
 
       <div class="testimonial-group">
         <div class="testimonial">
-            Working with Farid was a seamless experience from start to finish. He’s professional, knowledgeable, and truly goes the extra mile to find the best solutions. Would highly recommend him to anyone looking for a reliable and trustworthy mortgage broker.
+            Working with Farid was a seamless experience from start to finish. He's professional, knowledgeable, and truly goes the extra mile to find the best solutions. Would highly recommend him to anyone looking for a reliable and trustworthy mortgage broker.
         <br><br> - Milad T.
         </div>
         
@@ -68,7 +68,7 @@
         <br> - Scott W.
         </div>
     </div>    
-
+</div>
 </div>
 
    <div class="loading-bar-container">
@@ -91,30 +91,35 @@
     </script>
 
 <script>
-  const groups = document.querySelectorAll('.testimonial-group');
-  const loadingBar = document.querySelector('.loading-bar');
-  let currentIndex = 0;
+    const groups = document.querySelectorAll('.testimonial-group');
+const loadingBar = document.querySelector('.loading-bar');
+let currentIndex = 0;
 
-  function showGroup(index) {
-    groups.forEach((group, i) => {
-      group.classList.toggle('active', i === index);
-    });
+function showGroup(index) {
+  groups.forEach((group, i) => {
+    group.classList.remove('active');
+  });
 
-    // Restart the loading bar animation
-    loadingBar.style.transition = 'none';
-    loadingBar.style.width = '0%';
-    void loadingBar.offsetWidth; // Force reflow to restart animation
-    loadingBar.style.transition = 'width 30s linear';
-    loadingBar.style.width = '100%';
-  }
+  groups[index].classList.add('active');
 
-  showGroup(currentIndex); // Show the first group initially
+  // Restart loading bar
+  loadingBar.style.transition = 'none';
+  loadingBar.style.width = '0%';
+  void loadingBar.offsetWidth;
+  loadingBar.style.transition = 'width 15s linear';
+  loadingBar.style.width = '100%';
+}
 
-  setInterval(() => {
-    currentIndex = (currentIndex + 1) % groups.length;
-    showGroup(currentIndex);
-  }, 30000); // 30 seconds
+showGroup(currentIndex);
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % groups.length;
+  showGroup(currentIndex);
+}, 15000);
+
+
 </script>
+
 
 
     <script src="/scripts/script.js"></script>
