@@ -399,39 +399,18 @@ nav {
         align-items: center;
     }
 
-    .testimonial-wrapper {
-    padding: 20px;
-  }
+      .testimonial-group {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 10px;
+        position: relative;
+    }
 
-  .fade-container {
-    min-height: auto;
-    padding: 10px;
-  }
+    .testimonial-group:not(.active) {
+  display: none;
+}
 
-  .testimonial-group {
-    grid-template-columns: 1fr; 
-    gap: 30px;
-    padding: 20px;
-    position: relative;
-  }
 
-  .testimonial {
-    font-size: 1rem;
-    padding: 15px 15px 25px 20px;
-    max-width: 100%;
-    margin: 10px auto;
-  }
-
-  .testimonial::before,
-  .testimonial::after {
-    font-size: 2rem;
-    top: 0;
-    bottom: 0;
-  }
-
-  .loading-bar-container {
-    margin-top: 30px;
-  }
 
 
     .parent-container {
