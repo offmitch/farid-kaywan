@@ -33,7 +33,7 @@ app.post("/contact", async (req, res) => {
 
     const mailOptions = {
         from: email,
-        to: "farid.kaywan@kaywanlending.com",
+        to: "mitchell.macdonald10@gmail.com",
         subject: `Hey Farid it's ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
     };
