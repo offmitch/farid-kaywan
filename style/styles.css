@@ -48,41 +48,47 @@ body {
     font-weight: 800;
     font-style: normal;
 }
-
 header {
     background: white;
-    color: white;
-    padding: 15px;
-    width: 100vw;
+    padding: 0;
+    margin: 0;
 }
 
 header h1 {
-    color: #333;
-    font-size: 40px;
-    width: 100vw;
+    margin: 0;
+    padding: 0;
+    line-height: 0; 
 }
 
-#header-container {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    background: #555; 
-    z-index: 1000;
+.banner {
+    display: block;
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.banner.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 1270px) {
+    .banner.desktop {
+        display: none;
+    }
+    .banner.mobile {
+        display: inline-block;
+    }
 }
 
 nav {
     background: #555;
     padding: 10px;
-    width: 100vw;
-    top: 0;
-    left: 0;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    width: 100vw;
 }
 
 .parent-container {
@@ -370,7 +376,7 @@ nav {
 }
 
 .nav-links li {
-    margin: 0 15px;
+    margin: 2 15px;
 }
 
 .nav-links a {

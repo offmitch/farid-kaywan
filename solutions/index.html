@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Architect</title>
+    <link rel="stylesheet" href="../style/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        .parent-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .parent-container .container {
+            width: 80%;
+            padding: 20px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .solutions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px 0;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    .guide-container {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .guide-text {
+        flex: 1;
+        text-align: left;
+    }
+
+    .guide-image {
+        flex: 0 0 35%; 
+        max-width: 35%;
+        margin-left: 20px; 
+    }
+
+    .guide-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .step {
+        width: 100%;
+    }
+    
+    
+
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch('../include/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header-container').innerHTML = data);
+    </script>
+
+<div class="parent-container">
+    <div class="container">
+        <div class="title">
+            <div class="solutions">
+                <button class="my-button" data-target="buying-a-home" data-bg-image="../images/nice_house.jpg">Buying a Home</button>
+                <button class="my-button" data-target="refinancing" data-bg-image="../images/bg2.jpg">Refinancing Your Mortgage</button>
+                <button class="my-button" data-target="renewing" data-bg-image="../images/bg3.jpg">Renewing Your Mortgage</button>
+                <button class="my-button" data-target="reverse" data-bg-image="../images/bg4.jpg">Reverse Mortgage</button>
+                <!-- <button class="my-button" data-target="easy-lease">Equipment Leasing</button> -->
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <div id="buying-a-home" class="content-section">
+        <div class="how-to-guide">
+            <h2>Your How-to Guide to Buying Smart</h2>
+        
+            <div class="guide-container">
+                <div class="guide-text">
+                    <div class="step">
+                        <h3>Work Out a Budget</h3>
+                        <p>You’ve got your home and neighborhood in mind. It’s smart to meet with one of our experienced Mortgage Brokers now to get a handle on how much you can afford as a monthly mortgage payment.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Get Experience on Your Side</h3>
+                        <p>Our Mortgage Brokers really are on your side! They can help you access great rates and mortgage options—offering both traditional and innovative solutions that meet your unique needs.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Get Pre-Approval</h3>
+                        <p>This is a smart step, as it ensures your mortgage rate is guaranteed for up to four months. Home sellers will know you’re serious, and you’ll have peace of mind knowing just what you can afford.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Do Your Homework</h3>
+                        <p>It’s often a good idea to work with a real estate broker who can help you find neighborhoods and homes that match your needs.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Make an Offer</h3>
+                        <p>Once you’ve found your home, your real estate agent will prepare a purchase offer on your behalf. Upon closing, you’ll have seven days to inspect the home and finalize financing.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Save Big with a Larger Down Payment</h3>
+                        <p>If it’s within your budget, consider putting more down. Your Mortgage Broker can advise you on how this can save you thousands in the long run.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Factor in Additional Costs</h3>
+                        <p>Closing costs, Land Transfer Tax, Home Inspection, Property Tax, and home insurance—discuss these costs upfront with your Mortgage Broker so there are no surprises.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Sign on the Dotted Line</h3>
+                        <p>Your lawyer will finalize the paperwork a few days before closing. You’ll sign the necessary documents, pay your down payment, and cover any additional purchase-related costs.</p>
+                    </div>
+        
+                    <div class="step">
+                        <h3>Welcome Home</h3>
+                        <p>On closing day, the title of the home will be transferred to your name, and you’ll pick up your keys. Now, wasn’t that easy?</p>
+                    </div>
+                </div>
+        
+                <div class="guide-image">
+                    <img src="../images/nice_house.jpg" alt="Buying a Home">
+                </div>
+            </div>
+        </div>
+        
+        
+</div>
+<div id="refinancing" class="content-section">
+    <div class="how-to-guide">
+        <h2>Your How-to Guide to Refinancing Your Mortgage</h2>
+    
+        <div class="guide-container">
+            <div class="guide-text">
+                <div class="step">
+                    <h3>Review Your Refinancing Options</h3>
+                    <p>You may want to add that new kitchen you’ve been dreaming about, take a special vacation, or even take care of your outstanding debt. To help you get there, you may want to reduce your term, switch from an adjustable-rate mortgage to a fixed-rate mortgage, or consolidate your first and second mortgages.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Check Your Credit</h3>
+                    <p>It’s a smart step to check your credit because lenders will do so. The better your credit rating, the more desirable your business will be to a lender. One easy step to start improving your credit rating is to avoid maxing out your credit card balances.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Go Shopping</h3>
+                    <p>Just like you shop for the best value on your groceries, your Mortgage Broker will go shopping on your behalf for the best interest rate and options. After all, a lower rate can save you big time in costs over the life of your new mortgage.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Prepare a List</h3>
+                    <p>Your Mortgage Broker will need some basic information to move forward, such as your current lender’s details, how much you owe on your current mortgage loan, your gross monthly income, and the value of your home.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Do the Math</h3>
+                    <p>You’ll be offered a number of loan options, so discuss them with your Mortgage Broker and choose one that best suits your needs. Beyond just considering the lowest rate, discuss whether a fixed or adjustable rate is better for your situation.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Factor in a Few Additional Costs</h3>
+                    <p>There will be a few fees and costs associated with this process, such as brokerage or underwriting fees, as well as transaction, settlement, and closing costs. Your Mortgage Broker can discuss these with you and factor them into the mortgage.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>You're Ready to Apply</h3>
+                    <p>Okay, it’s time to apply with your chosen lender. Be ready with a few required documents, such as proof of income, income tax returns, recent bank statements, and your monthly expenses.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Home Sweet Home</h3>
+                    <p>That’s it! Once the paperwork is done, it’s time to take that vacation or begin your dream kitchen renovation. Enjoy!</p>
+                </div>
+            </div>
+    
+            <div class="guide-image">
+                <img src="../images/bg2.jpg" alt="Refinancing Your Mortgage">
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div id="renewing" class="content-section">
+    <div class="how-to-guide">
+        <h2>Your How-to Guide to Renewing Your Mortgage</h2>
+    
+        <div class="guide-container">
+            <div class="guide-text">
+                <div class="step">
+                    <h3>Remember, You're in the Driver's Seat</h3>
+                    <p>You’ve got a track record as a homeowner, and lenders will want your business—and will compete for it. That’s where a mortgage broker can really help. Your first step is to connect with us. With low interest rates and a growing selection of innovative mortgage solutions, you could potentially save thousands by shopping around.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Comparison Shop</h3>
+                    <p>Our independent Mortgage Brokers know what’s going on in the marketplace and can connect with over 50 lenders to find the best interest rate and options for your renewal. After all, a lower rate can save you big time in costs over the life of your new mortgage.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Do the Math</h3>
+                    <p>You’ll be offered a number of loan options, so discuss them with your Mortgage Broker and choose one that best suits your needs. Beyond just considering the lowest rate, discuss whether a fixed or adjustable rate is better for your situation.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Ask for More</h3>
+                    <p>There will be a few fees and costs associated with this process, such as legal and administrative costs for transferring the mortgage, as well as a mortgage discharge fee. Your Mortgage Broker can ask to have these costs absorbed—it’s worth asking because the market is competitive.</p>
+                </div>
+    
+                <div class="step">
+                    <h3>Sit Back and Relax</h3>
+                    <p>That’s it! Once your renewal is completed, you can sit back and give yourself a pat on the back (and your Mortgage Broker too).</p>
+                </div>
+            </div>
+    
+            <div class="guide-image">
+                <img src="../images/bg3.jpg" alt="Renewing Your Mortgage">
+            </div>
+        </div>
+    </div>
+    
+</div>
+<div id="reverse" class="content-section">
+    <div class="how-to-guide">
+        <h2>A Solution Designed Specifically for Senior Homeowners</h2>
+    
+        <div class="guide-container">
+            <div class="guide-text">
+                <p>Reverse mortgages continue to gain popularity for Canadian homeowners aged 55 plus. One reason for the increased popularity is necessity—many retired Canadians seek ways to increase cash flow, pay off debts, or cover daily expenses. Additionally, many prefer to remain in their homes for as long as possible, which may require renovations and upkeep. Whatever your need, a reverse mortgage could be a great solution!</p>
+    
+                <h3>Who Offers Reverse Mortgages in Canada?</h3>
+                <p>There are two Canadian Schedule I banks that offer reverse mortgages: Equitable Bank and Home Equity Bank. Both banks’ reverse mortgage products function similarly. We can help you determine which is better suited to your needs.</p>
+    
+                <h3>What is a Reverse Mortgage?</h3>
+                <p>Reverse mortgages are designed for Canadians aged 55 and older, allowing them to access their home’s equity to improve financial stability. Unlike traditional mortgages, reverse mortgage borrowers are not required to make regular payments. Instead, the balance accrues interest and is only due when the homeowner sells or moves out.</p>
+    
+                <p>Upon payout, the mortgage will include the original principal balance, accrued interest, and any fees incurred. However, historical data shows that home equity is typically maintained or grows due to appreciation values exceeding interest accrual.</p>
+    
+                <p>While reverse mortgages primarily benefit older individuals, they can also help families looking to support elderly parents. Instead of selling and moving into care facilities, homeowners can use reverse mortgages to fund in-home care, maintaining their independence and comfort.</p>
+    
+                <h3>Reasons to Consider a Reverse Mortgage</h3>
+                <p>Reverse mortgages allow homeowners to access up to 55% of their home’s equity, converting it into cash as a lump sum or structured monthly payments. Funds can be used to:</p>
+                <ul>
+                    <li>Pay off existing debts</li>
+                    <li>Gift money to family</li>
+                    <li>Enhance quality of life</li>
+                    <li>Add safety features or renovations to the home</li>
+                    <li>Expand an investment portfolio</li>
+                    <li>Switch an existing mortgage dollar-for-dollar to eliminate payments and increase cash flow</li>
+                </ul>
+    
+                <h3>Benefits of a Reverse Mortgage</h3>
+                <p>Beyond tapping into home equity, reverse mortgages offer several advantages:</p>
+                <ul>
+                    <li>No monthly mortgage payments</li>
+                    <li>No income or credit qualifications</li>
+                    <li>Minimal paperwork required</li>
+                    <li>Homeowners retain property title and ownership</li>
+                    <li>Flexible options to break term early or make optional interest payments</li>
+                    <li>Penalty waived in the event of death or care home placement to preserve the estate</li>
+                </ul>
+    
+                <p>If a reverse mortgage sounds like the right option for you or your parents, contact a Dominion Lending Centres Mortgage Professional today to discuss your situation and explore this increasingly popular mortgage option.</p>
+    
+                <h3>Misconceptions about Reverse Mortgages</h3>
+    
+                <div class="misconceptions">
+                    <h4>“With a Reverse Mortgage, You No Longer Own Your Home”</h4>
+                    <p><strong>FALSE.</strong> You always maintain title, ownership, and control of your home. The lender simply has a first mortgage on the title.</p>
+    
+                    <h4>“You Will Owe More Than the Value of Your Home”</h4>
+                    <p><strong>FALSE.</strong> Most reverse mortgages include a “No Negative Equity Guarantee,” ensuring that as long as the homeowner meets obligations, the amount due will not exceed the fair market value of the home.</p>
+    
+                    <h4>“Reverse Mortgages are Expensive”</h4>
+                    <p><strong>FALSE.</strong> Costs associated with a reverse mortgage, such as appraisals and legal fees, are comparable to a traditional mortgage. The main difference is a one-time closing and administration fee.</p>
+    
+                    <h4>“Reverse Mortgages Have Higher Interest Rates”</h4>
+                    <p><strong>DEPENDS.</strong> While rates are slightly higher than traditional mortgages, the difference is minimal. Many retirees choose reverse mortgages because they may not qualify for a conventional mortgage or prefer the flexibility of no monthly payments.</p>
+    
+                    <h4>“You Can’t Pass on Your Home”</h4>
+                    <p><strong>FALSE.</strong> Your heirs can inherit the property by paying off the reverse mortgage after you pass away. Many reverse mortgage contracts include a “No Negative Equity Guarantee,” ensuring that if the mortgage balance exceeds the home's value, the lender covers the difference.</p>
+                </div>
+            </div>
+    
+            <div class="guide-image">
+                <img src="../images/bg4.jpg" alt="Reverse Mortgage for Seniors">
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+</div>
+
+    <div id="footer-container"></div>
+    <script>
+        fetch('../include/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer-container').innerHTML = data);
+    </script>
+        <script src="../scripts/script.js"></script>
+
+</body>
+</html>
