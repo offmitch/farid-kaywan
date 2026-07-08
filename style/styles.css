@@ -3,6 +3,26 @@
     max-width: 100%;
 }
 
+
+.nunito-sans-400 {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../fonts/Gotham-Bold.woff2") format("woff2"),
+       url("../fonts/Gotham-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -10,12 +30,13 @@ html, body {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Nunito Sans", sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
     width: 100vw;
 }
+
 
 #footer-container {
   position: fixed;
@@ -29,35 +50,25 @@ body {
   z-index: 1000;         
 }
 
-.roboto-condensed-light {
-    font-family: "Roboto Condensed", serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-}
 
-.roboto-condensed-regular {
-    font-family: "Roboto Condensed", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.roboto-condensed-bold {
-    font-family: "Roboto Condensed", sans-serif;
-    font-weight: 800;
-    font-style: normal;
-}
 header {
     background: white;
     padding: 0;
     margin: 0;
 }
 
-header h1 {
-    margin: 0;
-    padding: 0;
+h1 {
+    font-family: "Gotham", sans-serif;
+    margin: 5;
+    padding: 15;
     line-height: 0; 
+}
+
+h4{
+    font-family: "Gotham", sans-serif;
+    margin: 0;
+    padding: 15;
+    line-height: 1.2;
 }
 
 .banner {
