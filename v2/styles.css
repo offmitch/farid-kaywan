@@ -649,8 +649,9 @@ h2 {
     margin: 0 auto;
   }
 }
-
+/* 
 /* Tablets and small laptops */
+
 @media screen and (min-width: 769px) {
   .parent-container {
     padding: 20px;
@@ -666,5 +667,16 @@ h2 {
 
   .contact-info {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  header{
+    height: 260px;
+  }
+} 
+
+@media screen and (min-width: 2000px) {
+
+  header{
+    height: 350px;
   }
 }
