@@ -32,7 +32,7 @@ body {
 }
 
 header {
-    background-image: url("../images/banner2.png");
+    background-image: url("../images/banner.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -95,20 +95,6 @@ nav {
   padding: 10px;
 }
 
-h1 {
-  font-family: "Gotham", sans-serif;
-  margin: 5;
-  padding: 15;
-  line-height: 0;
-}
-
-h4 {
-  font-family: "Gotham", sans-serif;
-  margin-top: 0;
-  padding: 15;
-  line-height: 1.2;
-}
-
 .banner {
   display: block;
   width: 100%;
@@ -138,7 +124,7 @@ nav a {
 .parent-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 110px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -217,16 +203,15 @@ img {
 }
 
 .title h1 {
-  color: #2c3e50;
-  font-size: 2.5em;
+  color: #102A43;
+  font-size: 3em;
   font-weight: 700;
 }
 
 .title h4 {
-  color: #7f8c8d;
-  font-size: 1.2em;
+  color: #C9A66B;
+  font-size: 1.5em;
   font-weight: 400;
-  margin-top: 10px;
 }
 
 .testimonial-wrapper {
@@ -285,7 +270,7 @@ img {
 }
 
 .testimonial::before {
-  content: "“";
+  content: "\201C";
   font-size: 3rem;
   color: #2a8ab7;
   font-weight: bold;
@@ -295,7 +280,7 @@ img {
 }
 
 .testimonial::after {
-  content: "”";
+  content: "\201D";
   font-size: 3rem;
   color: #2a8ab7;
   font-weight: bold;
@@ -423,6 +408,18 @@ h2 {
 
 /* Mobile Media Queries */
 @media screen and (max-width: 576px) {
+
+  header {
+    background-image: url("../images/bannerM.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
   .containers-wrapper {
     flex-direction: column;
     align-items: center;
@@ -441,6 +438,7 @@ h2 {
 
   .parent-container {
     padding: 5px;
+    margin-bottom: 45px;
   }
 
   .container {
@@ -563,6 +561,7 @@ h2 {
     position: relative;
     border-radius: 5px;
   }
+
 }
 
 /* Small tablets and large phones */

@@ -14,14 +14,6 @@
     "YTLC" 500;
 }
 
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/Gotham-Bold.woff2") format("woff2"),
-       url("../fonts/Gotham-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
 
 html, body {
     overflow-x: hidden;
@@ -50,12 +42,17 @@ body {
   z-index: 1000;         
 }
 
-
 header {
-    background: white;
-    padding: 0;
-    margin: 0;
+    background-image: url("../images/banner.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+
 
 h1 {
     font-family: "Gotham", sans-serif;
@@ -369,6 +366,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: auto;
     top: 0;
     left: 0;
     width: 100%;
