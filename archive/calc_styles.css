@@ -60,6 +60,10 @@
     grid-row: 3/4;
 }
 
+.input-container select {
+    flex: 1;
+}
+
 .left-content > form > div {
     display: flex;
     flex-direction: column;
@@ -104,6 +108,7 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
 
