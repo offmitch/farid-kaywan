@@ -4,8 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
       rel="stylesheet"
@@ -19,9 +17,10 @@
     </style>
   </head>
   <body>
+ 
     <div id="header-container">
       <script>
-        fetch("include/header.html")
+        fetch("../include/header.html")
           .then((response) => response.text())
           .then(
             (data) =>
@@ -29,13 +28,12 @@
           );
       </script>
     </div>
-
     <div class="parent-container">
       <div class="container">
         <div class="profile-container">
           <div class="title">
             <img
-              src="/images/farid-new.jpg"
+              src="../images/farid-new.jpg"
               alt="Farid's Profile Picture"
               class="profile-image"
             />
@@ -45,8 +43,8 @@
             <h4>Mortage Broker</h4>
           </div>
         </div>
-      </div>
-      <div class="container">
+      <!-- </div>
+      <div class="container"> -->
         <p class="intro">
           My journey in financial services began over a decade ago, driven by a
           desire to help people navigate the complexities of lending. With my
@@ -74,16 +72,14 @@
       </div>
     </div>
 
-    <div id="footer-container"></div>
-
-    <script>
-      fetch("include/footer.html")
+    <div id="footer-container"> <script>
+      fetch("../include/footer.html")
         .then((response) => response.text())
         .then(
           (data) =>
             (document.getElementById("footer-container").innerHTML = data),
         );
-    </script>
-    <script src="/scripts/script.js"></script>
+    </script></div>
+    <script src="../scripts/script.js"></script>
   </body>
 </html>
